@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html style="text-rendering: optimizeLegibility;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css2.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lacquer|Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="//fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="Scripts/bootstrap.js"></script>
+ 
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <style></style>
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">
+          Yazdchi Gallery
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="flower.html">Flower</a>
+          <a href="">Landscape</a>
+          <a href="news.html">News</a>
+        </div>
+      </div>
+      <a href="about.html">Artist Biography</a>
+      <a href="training.html">Training</a>
+      <a href="links.html">Links</a>
+      <a href="contact.html">Contact</a>
+      <a href="#login" class="navlogin ">Login</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <div class="container contact-form">
+      <form
+        method="post"
+        style="padding-top: 20px;background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) )
+      , url('icon.jpg'), no-repeat center center fixed; background-size: cover;"
+      >
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <h1 class="head" style="color: white">
+                محمد علی یزدچی
+              </h1>
+              <p class="paragraf" style="color: white">
+                در اسفند ماه ۱۳۵۴ در تهران متولد شد . و در دوره نوجوانی مجذوب
+                دنیای سحرانگیز طرح و رنگ شد . به دنبال این علاقه وافر مشغول
+                فراگیری طراحی و نقاشی نزد استادان گلزاری و رهبر شد . در سال ۱۳۷۳
+                و در طی یک اتفاق با تکنیک آبرنگ آشنا شد و بازدید او از یک
+                نمایشگاه گروهی در نگارخانه کنداوس که ار آثار اساتید آن دوره بود
+                . شیفتگی او را به این سبک و تکنیک دو چندان ساخت علاقه شدید او به
+                آبرنگ باعث شد تا رشته مهندسی را ناتمام گذاشته . و کلاسهای آزاد
+                دانشگاه تهران در زمینه بخشهای تئوری هنر را در پیش بگیرد وی به
+                صورت تجربی و با مطالعه ار آثار به چاب رسیده موجود در آن زمان .
+                سالهایی را به فراگیری بیشتر این تکنیک پرداخت دراز سال ۱۳۷۹
+                فعالیتهای هنری خود را بصورت حرفه ای در آتلیه شخصی اش آغاز نموده
+                و ماحصل آن برگزاری و شرکت در چندین نمایشگاه انفرادی و گروهی و
+                همچنین انتخاب آثاری از او در سالهای ۲۰۱۳ و ۲۰۱۴ در کتاب
+                International Watercolor Society (انجمن بین المللی آبرنگ)
+                میباشد.
+              </p>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script>
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      
+    </script>
+  </body>
+</html>
+

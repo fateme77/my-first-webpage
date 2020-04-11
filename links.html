@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css2.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lacquer|Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="//fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style></style>
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">
+          Yazdchi Gallery         
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="flower.html">Flower</a>
+          <a href="">Landscape</a>
+          <a href="news.html">News</a>
+        </div>
+      </div>
+      <a href="about.html">Artist Biography</a>
+      <a href="training.html">Training</a>
+      <a href="links.html">Links</a>
+      <a href="contact.html">Contact</a>
+      <a href="#login" class="navlogin ">Login</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="content">
+      <div style="padding-top: 20px;">
+        <p class="paragraf" style="text-align: center; font-family: 'Lacquer', sans-serif;
+        font-family: 'Roboto Mono', monospace; ">
+          www.gggggg.com
+        </p>
+       
+      </div>
+    </div>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+  </body>
+</html>

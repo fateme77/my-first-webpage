@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html style="text-rendering: optimizeLegibility;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css2.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lacquer|Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="//fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="Scripts/bootstrap.js"></script>
+
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style></style>
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">
+          Yazdchi Gallery
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="flower.html">Flower</a>
+          <a href="">Landscape</a>
+          <a href="news.html">News</a>
+        </div>
+      </div>
+      <a href="about.html">Artist Biography</a>
+      <a href="training.html">Training</a>
+      <a href="links.html">Links</a>
+      <a href="contact.html">Contact</a>
+      <a href="#login" class="navlogin ">Login</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <div class="container contact-form">
+      <div class="row">
+        <div class="col-lg-12 col-lg-offset-4">
+          <div class="form-group">
+            <h1 class="head" style="text-align: right; direction: rtl;">
+              برگزاری کلاسهای آموزشی
+            </h1>
+            <p class="paragraf">
+              بصورت ترمی بوده و هر ترم شامل ۱۰ جلسه ۴ ساعته است .
+            </p>
+            <p class="paragraf">
+              ساعت برگزاری کلاسها ۱۰ الی ۱۴ و ۱۶ الی ۲۰ میباشد .
+            </p>
+            <h3
+              class="head"
+              style="text-align: right;padding-top: 5px; direction: rtl;"
+            >
+              لطفا یک ماه پیش از شرکت در کلاسها فرم رزرو را بصورت حضوری تکمیل
+              نمائید .
+            </h3>
+            <p class="paragraf">
+              جهت اطلاعات بیشتر با گالری تماس حاصل فرمائید .
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+  </body>
+</html>

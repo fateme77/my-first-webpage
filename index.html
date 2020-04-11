@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css1.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lacquer|Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="gallery.jpg"
+    />
+    
+    
+    <style></style>
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">
+          Yazdchi Gallery
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="flower.html">Flower</a>
+          <a href="">Landscape</a>
+          <a href="news.html">News</a>
+        </div>
+      </div>
+      <a href="#about">Artist Biography</a>
+      <a href="training.html">Training</a>
+      <a href="links.html">Links</a>
+      <a href="contact.html">Contact</a>
+      <a href="#login" class="navlogin ">Login</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <div class="About">
+      <div class="containerimg">
+        <div style="height: 23%"></div>
+        <div
+          style="height: 54%;width: 85%; padding-left: 10%;"
+          class="aboutimg"
+        >
+          <img style="width: 100%;height: 100%;" src="yazdchi.png" />
+        </div>
+        <div style="height: 23%"></div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="wrapper">
+        <article>
+          <div class="desc full">
+            <h4 class="subtitle">
+              محمد علی یزدچی
+            </h4>
+            <p>
+              در اسفند ماه ۱۳۵۴ در تهران متولد شد . و در دوره نوجوانی مجذوب
+              دنیای سحرانگیز طرح و رنگ شد . به دنبال این علاقه وافر مشغول
+              فراگیری طراحی و نقاشی نزد استادان گلزاری و رهبر شد . در سال ۱۳۷۳
+              و در طی یک اتفاق با تکنیک آبرنگ آشنا شد و بازدید او از یک
+              نمایشگاه گروهی در نگارخانه کنداوس که ار آثار اساتید آن دوره بود
+              . شیفتگی او را به این سبک و تکنیک دو چندان ساخت علاقه شدید او به
+              آبرنگ باعث شد تا رشته مهندسی را ناتمام گذاشته . و کلاسهای آزاد
+              دانشگاه تهران در زمینه بخشهای تئوری هنر را در پیش بگیرد وی به
+              صورت تجربی و با مطالعه ار آثار به چاب رسیده موجود در آن زمان .
+              سالهایی را به فراگیری بیشتر این تکنیک پرداخت دراز سال ۱۳۷۹
+              فعالیتهای هنری خود را بصورت حرفه ای در آتلیه شخصی اش آغاز نموده
+              و ماحصل آن برگزاری و شرکت در چندین نمایشگاه انفرادی و گروهی و
+              همچنین انتخاب آثاری از او در سالهای ۲۰۱۳ و ۲۰۱۴ در کتاب
+              International Watercolor Society (انجمن بین المللی آبرنگ)
+              میباشد.
+            </p>
+          </div>
+          
+        </article>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="projects-container" >
+              <div id="container"></div>
+              <div id="images">
+                <div class="item">
+                  <img src="icon.jpg" />
+                </div>
+                <div class="item">
+                  <img src="icon2.jpg" />
+                </div>
+                <div class="item">
+                  <img src="bckGround-icon.jpg" />
+                </div>
+                <div class="item">
+                  <img src="icon.jpg" />
+                </div>
+                <div class="item">
+                  <img src="icon2.jpg" />
+                </div>
+                <div class="item">
+                  <img src="bckGround-icon.jpg" />
+                </div>
+                <div class="item">
+                  <img src="icon.jpg" />
+                </div>
+                <div class="item">
+                  <img src="icon.jpg" />
+                </div>
+                <div class="item">
+                  <img src="icon2.jpg" />
+                </div>
+                <div class="item">
+                  <img src="bckGround-icon.jpg" />
+                </div>
+                <div class="item">
+                  <img src="icon.jpg" />
+                </div>
+                <div class="item">
+                  <img src="icon.jpg" />
+                </div>
+                <div class="item">
+                  <img src="icon2.jpg" />
+                </div>
+                <div class="item">
+                  <img src="bckGround-icon.jpg" />
+                </div>
+      </div>
+    </section>
+
+    <script>
+      $(function() {
+        var $container = $("#container").masonry({
+          itemSelector: ".item",
+          columnWidth: 200,
+        });
+        $container.masonryImagesReveal($("#images").find(".item"));
+      });
+      $.fn.masonryImagesReveal = function($items) {
+        var msnry = this.data("masonry");
+        var itemSelector = msnry.options.itemSelector;
+        $items.hide();
+        this.append($items);
+        $items.imagesLoaded().progress(function(imgLoad, image) {
+          var $item = $(image.img).parents(itemSelector);
+          $item.show();
+          msnry.appended($item);
+        });
+        return this;
+      };
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+  </body>
+</html>

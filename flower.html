@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="flower-css.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lacquer|Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style></style>
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">
+          Yazdchi Gallery
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="flower.html">Flower</a>
+          <a href="">Landscape</a>
+          <a href="news.html">News</a>
+        </div>
+      </div>
+      <a href="about.html">Artist Biography</a>
+      <a href="training.html">Training</a>
+      <a href="links.html">Links</a>
+      <a href="contact.html">Contact</a>
+      <a href="#login" class="navlogin ">Login</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <div class="content">
+      <div class="container">
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="bckGround-icon.jpg" style="width:100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="bckGround-icon.jpg" style="width:100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="bckGround-icon.jpg" style="width:100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="bckGround-icon.jpg" style="width:100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img src="bckGround-icon.jpg" style="width:100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img src="bckGround-icon.jpg" style="width:100%" />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <div class="row">
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="bckGround-icon.jpg"
+              style="width:100%"
+              onclick="currentSlide(1)"
+              alt=""
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="bckGround-icon.jpg"
+              style="width:100%"
+              onclick="currentSlide(2)"
+              alt=""
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="bckGround-icon.jpg"
+              style="width:100%"
+              onclick="currentSlide(3)"
+              alt=""
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="bckGround-icon.jpg"
+              style="width:100%"
+              onclick="currentSlide(4)"
+              alt=""
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="bckGround-icon.jpg"
+              style="width:100%"
+              onclick="currentSlide(5)"
+              alt=""
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="bckGround-icon.jpg"
+              style="width:100%"
+              onclick="currentSlide(6)"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+      }
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+  </body>
+</html>
